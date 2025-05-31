@@ -1,6 +1,9 @@
+
+#   Aplicação desenvolvida exclusivamente para teste de interface.
+
 # 🐱 UBEA
 
-Aplicação web desenvolvida para auxiliar uma ONG de gatos, permitindo que usuários explorem os felinos disponíveis para adoção por meio de um sistema de busca, filtros por categoria e visualização de detalhes em modais interativos.
+Objetivo: auxiliar uma ONG de gatos, permitindo que usuários explorem os felinos disponíveis para adoção por meio de um sistema de busca, filtros por categoria e visualização de detalhes em modais interativos.
 
 ## 🚀 Funcionalidades
 
