@@ -2,10 +2,6 @@
 
 Aplicação web desenvolvida para auxiliar uma ONG de gatos, permitindo que usuários explorem os felinos disponíveis para adoção por meio de um sistema de busca, filtros por categoria e visualização de detalhes em modais interativos.
 
-## 🌐 Demonstração
-
-[🔗 Acesse o projeto aqui](https://biancavdj.github.io/UBEA-2.0)
-
 ## 🚀 Funcionalidades
 
 - 🔍 Busca por nome dos gatos
