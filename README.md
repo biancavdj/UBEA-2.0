@@ -20,9 +20,9 @@ Aplicação web desenvolvida para auxiliar uma ONG de gatos, permitindo que usu�
 1. Clone o repositório:
 
    "git clone https://github.com/biancavdj/UBEA-2.0.git"
-   
-Navegue até o diretório do projeto:
+
+2. Navegue até o diretório do projeto:
 
    "cd UBEA-2.0"
    
-Abra o arquivo index.html no seu navegador preferido.
+3. Abra o arquivo index.html no seu navegador preferido.
