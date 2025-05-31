@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBEA - Unidos pelo Bem Estar Animal</title>
+    <meta name="description" content="UBEA - Unidos pelo Bem Estar Animal. Adote um gatinho e transforme vidas. Protetoras independentes desde 2010.">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- External CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div id="overlay" class="overlay"></div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="UBEA Logo">
+                <span>UBEA</span>
+            </div>
+            <nav class="nav">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#gatos" class="nav-link">Gatos</a>
+                <a href="#calendarios" class="nav-link">Calendários</a>
+                <a href="#parceiros" class="nav-link">Parceiros</a>
+                <a href="#colabore" class="nav-link">Colabore</a>
+                <a href="#contato" class="nav-link">Contato</a>
+
+                
+                <button class="btn-login" onclick="openModal('loginModal')">Login</button>
+            </nav>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+              </div>
+        </div>
+    </header>
+
+  <!-- Hero Section -->
+<section id="inicio" class="hero" style="position: relative; overflow: hidden;">
+    <div class="hero-content" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; padding: 0 20px;">
+      
+      <div class="hero-text" style="flex: 1; min-width: 280px;">
+        <h1>Unidos Pelo Bem Estar Animal</h1>
+        <h2>Protetoras Independentes</h2>
+        <h3>Desde 2010</h3>
+        <p>
+          Nós, da UBEA, somos um grupo de três amigas apaixonadas por gatos.
+          Nosso objetivo é cuidar deles, prepará-los para encontrar lares amorosos,
+          promover a castração e combater estigmas.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="showSection('sobre')">Conheça-nos</button>
+          <button class="btn btn-secondary" onclick="openModal('cadastroModal')">Quero Adotar</button>
+        </div>
+      </div>
+  
+      <div class="hero-image" >
+        <img src="assets/images/frajola.png"alt="" width="580" >
+      </div>
+  
+    </div>
+  </section>
+  
+    <!-- Gatos Section -->
+    <section id="gatos" class="gatos-section">
+        <div class="container">
+            <br>
+            <div class="section-header">
+                <h2>Gatos Disponíveis para Adoção</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary" onclick="openModal('cadastroGatoModal')" id="btnCadastroGato" style="display: none;">
+                        <i class="fas fa-plus"></i> Cadastrar Gato
+                    </button>
+                    <div class="filter-controls">
+                        <select id="filtroSexo">
+                            <option value="">Todos os sexos</option>
+                            <option value="M">Macho</option>
+                            <option value="F">Fêmea</option>
+                        </select>
+                        <select id="filtroIdade">
+                            <option value="">Todas as idades</option>
+                            <option value="filhote">Filhote (0-1 ano)</option>
+                            <option value="jovem">Jovem (1-3 anos)</option>
+                            <option value="adulto">Adulto (3+ anos)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="gatos-grid" id="gatosGrid">
+                <!-- Gatos serão carregados aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros Section -->
+    <section id="parceiros" class="parceiros-section">
+        <div class="container">
+            <br>
+            <div class="section-header">
+                <h2>Nossos Parceiros</h2>
+                <div class="section-actions">
+                    <button class="btn btn-primary" onclick="openModal('cadastroParceiroModal')" id="btnCadastroParceiro" style="display: none;">
+                        <i class="fas fa-plus"></i> Cadastrar Parceiro
+                    </button>
+                    <div class="filter-controls">
+                        <select id="filtroParceiros">
+                            <option value="">Todas as categorias</option>
+                            <option value="veterinario">Veterinário</option>
+                            <option value="petshop">Pet Shop</option>
+                            <option value="ong">ONG</option>
+                            <option value="clinica">Clínica</option>
+                            <option value="hotel">Hotel Pet</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="parceiros-grid" id="parceirosGrid">
+                <!-- Parceiros serão carregados aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    
+    <!-- Sobre Section -->
+<section id="sobre" class="sobre-section">
+    <div class="container">
+      <br><br><br>
+      <h2 style="text-align: center;">Sobre a ONG</h2>
+      <br>
+  
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
+        <!-- Imagem -->
+        <div style="flex: 1; min-width: 280px;">
+          <img src="assets/images/gm.png" alt="Imagem da ONG" style="width: 100%; max-width: 500px; border-radius: 20px;">
+        </div>
+  
+        <!-- Texto -->
+        <div style="flex: 1; min-width: 280px;">
+          <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
+            Derrubamos e desmistificamos tabus e preconceitos contra os gatos. Priorizamos a castração e a guarda responsável como forma de reduzir o abandono. <br>
+            Atuamos em um ponto de abandono de gatos na cidade de São José do Rio Preto/SP desde 2010, voluntariamente, com recursos próprios, parcerias, rifas, brechós e venda de produtos.
+          </p>
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 2rem;">
+            <div style="text-align: center; flex: 1;">
+              <span style="display: block; font-size: 2rem; font-weight: bold; color: #333;">120+</span>
+              <span style="color: #777;">Gatos Adotados</span>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <span style="display: block; font-size: 2rem; font-weight: bold; color: #333;">13</span>
+              <span style="color: #777;">Anos de Trabalho</span>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <span style="display: block; font-size: 2rem; font-weight: bold; color: #333;">50+</span>
+              <span style="color: #777;">Famílias Felizes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+  
+    <!-- Calendários Section -->
+<section id="calendarios" class="calendarios-section">
+    <div class="container">
+      <br><br><br>
+      <h2 style="text-align: center;">Calendários</h2>
+      <br>
+  
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
+        <!-- Imagem -->
+        <div style="flex: 1; min-width: 280px;">
+          <img src="assets/images/gatos/g2.jpg" alt="Imagem da ONG" style="width: 100%; max-width: 400px; border-radius: 20px;">
+        </div>
+  
+        <!-- Texto -->
+        <div style="flex: 1; min-width: 280px;">
+          <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
+            Ao longo dos anos, construímos um legado de amor e compaixão pelos gatinhos que mais precisam.
+            <br> A venda dos nossos calendários é o pilar que sustenta essa missão.
+            <br>Cada compra fortalece nossa capacidade de proporcionar um lar seguro e amoroso aos gatinhos
+            que aguardam ansiosamente a nossa ajuda.
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+     <!-- Colabore Section -->
+     <section id="colabore" class="colabore-section">
+        <div class="container">
+            <br>
+            <h2 style="text-align: center;"> Como nos ajudar? </h2> 
+            <br>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p> Aceitamos qualquer tipo de ajuda: desde sacos de rações,
+                        castração, apadrinhamentos, produtos para rifas, etc.</p>
+                    <p></p>
+                    <p> Temos um PIX exclusivo para ajudas financeiras da UBEA:
+                        <br>
+                        <div style="color:#92593e">Chave PIX: ubea120@hotmail.com</div>
+                        <br>
+                        <br>
+                        Qualquer quantia será sempre bem-vinda para ajudar nossos 120 Afigatinhos.
+                    </p>
+                     <div style="text-align: center; margin-top: 20px;">
+                        <img src="assets/images/qrcode.png" alt="QR Code PIX" style="max-width: 200px; width: 100%; height: auto;">
+                      </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato-section" >
+        <div class="container">
+            <h2 style="text-align: center;"><br>Entre em Contato</h2> <br>
+            
+            <br> <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:ubea120@hotmail.com?">ubea120@hotmail.com</a>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="https://wa.me/5517991228973" style="color:#92593e">(17) 99122-8973</a>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>São Paulo, SP</span>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/120afigatinhos_ubea/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" >@120afigatinhos_ubea</a>
+                 </div>
+                </div>
+                <form class="contato-form">
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu email" required>
+                    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <br>
+        <div class="container">
+            <p>&copy; 2025 UBEA - Unidos pelo Bem Estar Animal. Todos os direitos reservados.</p>
+            <p>Desenvolvido por: Alice Silva, Bianca Veronez e Pedro Murilo</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Senha" required>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <p>Não tem conta? <a href="#" onclick="closeModal('loginModal'); openModal('cadastroModal')">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <!-- Cadastro Modal -->
+    <div id="cadastroModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cadastroModal')">&times;</span>
+            <h2>Cadastro de Usuário</h2>
+            <form id="cadastroForm">
+                <input type="text" id="cadastroUsername" placeholder="Nome de usuário" required>
+                <input type="email" id="cadastroEmail" placeholder="Email" required>
+                <input type="password" id="cadastroPassword" placeholder="Senha" required>
+                <input type="tel" id="cadastroTelefone" placeholder="Telefone">
+                
+                <h3>Informações para Adoção</h3>
+                <label>
+                    <input type="checkbox" id="possuiAnimais"> Já possui outros animais
+                </label>
+                <label>
+                    <input type="checkbox" id="possuiCasaSegura"> Possui casa segura (telada)
+                </label>
+                <textarea id="descricaoAdicional" placeholder="Descrição adicional sobre você e sua experiência com animais"></textarea>
+                
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+            <p>Já tem conta? <a href="#" onclick="closeModal('cadastroModal'); openModal('loginModal')">Faça login</a></p>
+        </div>
+    </div>
+
+    <!-- Cadastro Gato Modal -->
+    <div id="cadastroGatoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cadastroGatoModal')">&times;</span>
+            <h2>Cadastrar Gato</h2>
+            <form id="cadastroGatoForm">
+                <input type="text" id="gatoNome" placeholder="Nome do gato" required>
+                <select id="gatoSexo" required>
+                    <option value="">Selecione o sexo</option>
+                    <option value="M">Macho</option>
+                    <option value="F">Fêmea</option>
+                </select>
+                <input type="number" id="gatoIdade" placeholder="Idade (em meses)" required>
+                <textarea id="gatoDescricao" placeholder="Descrição do gato" required></textarea>
+                <input type="file" id="gatoFoto" accept="image/*">
+                <button type="submit" class="btn btn-primary">Cadastrar Gato</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cadastro Parceiro Modal -->
+    <div id="cadastroParceiroModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cadastroParceiroModal')">&times;</span>
+            <h2>Cadastrar Parceiro</h2>
+            <form id="cadastroParceiroForm">
+                <input type="text" id="parceiroNome" placeholder="Nome do parceiro" required>
+                <select id="parceiroCategoria" required>
+                    <option value="">Selecione a categoria</option>
+                    <option value="veterinario">Veterinário</option>
+                    <option value="petshop">Pet Shop</option>
+                    <option value="ong">ONG</option>
+                    <option value="clinica">Clínica</option>
+                    <option value="hotel">Hotel Pet</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <input type="email" id="parceiroEmail" placeholder="Email" required>
+                <input type="tel" id="parceiroTelefone" placeholder="Telefone" required>
+                <input type="text" id="parceiroEndereco" placeholder="Endereço">
+                <input type="text" id="parceiroCnpj" placeholder="CNPJ">
+                <textarea id="parceiroDescricao" placeholder="Descrição dos serviços"></textarea>
+                <button type="submit" class="btn btn-primary">Cadastrar Parceiro</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content admin-panel">
+            <span class="close" onclick="closeModal('adminModal')">&times;</span>
+            <h2>Painel Administrativo</h2>
+            <div class="admin-tabs">
+                <button class="tab-btn active" onclick="showAdminTab('pedidos')">Pedidos de Adoção</button>
+                <button class="tab-btn" onclick="showAdminTab('usuarios')">Usuários</button>
+                <button class="tab-btn" onclick="showAdminTab('gatos')">Gatos</button>
+            </div>
+            <div id="adminContent">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

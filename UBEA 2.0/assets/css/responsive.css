@@ -1,0 +1,186 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  
+    #menu-toggle {
+      display: block;
+    }
+}
+
+  .nav {
+    display: none;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-controls select {
+    width: 100%;
+  }
+
+  .gatos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parceiros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contato-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .modal-content {
+    margin: 10% auto;
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .detalhes-gato-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .detalhes-gato-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .detalhes-actions {
+    flex-direction: column;
+  }
+
+  .gato-actions {
+    flex-direction: column;
+  }
+
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero {
+    padding: 100px 0 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .modal-content {
+    margin: 5% auto;
+    width: 98%;
+    padding: 1rem;
+  }
+
+  .gato-actions,
+  .parceiro-actions,
+  .detalhes-actions {
+    flex-direction: column;
+  }
+
+  .filter-controls {
+    gap: 0.5rem;
+  }
+
+  .hero-content {
+    gap: 2rem;
+  }
+
+  .stats {
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .contato-content {
+    gap: 1.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .modal-content {
+    padding: 0.8rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: -250px; /* esconde fora da tela */
+  height: 100vh;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 1000;
+}

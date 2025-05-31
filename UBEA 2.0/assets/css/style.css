@@ -1,0 +1,28 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+        line-height: 1.6;
+        overflow-y: auto;
+    }
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
+}
+
+.section {
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.cats-grid,
+.partners-grid {
+    overflow-y: auto;
+}
+

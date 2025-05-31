@@ -1,0 +1,429 @@
+/* ===== BOTÕES ===== */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-danger {
+  background: var(--error-color);
+  color: var(--white);
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.btn-login {
+  background: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background var(--transition-fast);
+}
+
+.btn-login:hover {
+  background: #cd853f;
+}
+
+/* ===== CARDS ===== */
+.gato-card,
+.parceiro-card {
+  background: var(--white);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.gato-card:hover,
+.parceiro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.gato-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.gato-card-content,
+.parceiro-card {
+  padding: 1.5rem;
+}
+
+.gato-card h3,
+.parceiro-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.gato-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+}
+
+.gato-card p,
+.parceiro-card p {
+  color: var(--gray-medium);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== STATUS BADGES ===== */
+.gato-status,
+.parceiro-categoria,
+.pedido-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.status-disponivel {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-adotado {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-pendente {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-aprovado {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-rejeitado {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.parceiro-categoria {
+  background: var(--background-color);
+  color: var(--primary-color);
+}
+
+/* ===== ACTIONS ===== */
+.gato-actions,
+.parceiro-actions,
+.pedido-actions,
+.detalhes-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.parceiro-actions,
+.pedido-actions {
+  justify-content: center;
+}
+
+/* ===== MODAIS ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: var(--border-radius-large);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content.admin-panel {
+  max-width: 800px;
+}
+
+.modal-detalhes-gato {
+  max-width: 800px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.close:hover {
+  color: var(--black);
+}
+
+.modal h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.modal input:focus,
+.modal select:focus,
+.modal textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.modal label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+}
+
+.modal h3 {
+  color: var(--primary-color);
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.modal p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.modal a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.modal a:hover {
+  text-decoration: underline;
+}
+
+/* ===== DETALHES DO GATO ===== */
+.detalhes-gato-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.detalhes-gato-imagem img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detalhes-gato-info h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.detalhes-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: var(--gray-light);
+  border-radius: var(--border-radius);
+}
+
+.info-item i {
+  color: var(--primary-color);
+  width: 20px;
+}
+
+.descricao-completa {
+  margin: 1.5rem 0;
+}
+
+.descricao-completa h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* ===== FILTROS ===== */
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter-controls select {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  color: var(--gray-dark);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.filter-controls select:focus {
+  border-color: var(--primary-color);
+}
+
+/* ===== NOTIFICAÇÕES ===== */
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  color: var(--white);
+  font-weight: 500;
+  z-index: 3000;
+  transform: translateX(400px);
+  transition: transform var(--transition-fast);
+}
+
+.notification.show {
+  transform: translateX(0);
+}
+
+.notification.success {
+  background: var(--success-color);
+}
+
+.notification.error {
+  background: var(--error-color);
+}
+
+.notification.info {
+  background: var(--info-color);
+}
+
+/* ===== USER PANEL ===== */
+.user-panel {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-medium);
+  display: none;
+  z-index: 1500;
+  min-width: 200px;
+}
+
+.user-info {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.user-actions button {
+  padding: 8px 16px;
+  border: none;
+  background: var(--gray-light);
+  color: var(--gray-dark);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.user-actions button:hover {
+  background: #e0e0e0;
+}
