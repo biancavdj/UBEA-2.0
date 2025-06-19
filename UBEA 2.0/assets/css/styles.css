@@ -1,3 +1,30 @@
+/* Faz o body ocupar toda a tela e empurra o footer para baixo */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Faz o main crescer e empurra o footer */
+    padding: 60px 20px;
+}
+
+/* Estilo do Footer */
+.footer {
+    background-color: #92593e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+
 /* ===== VARIÁVEIS CSS ===== */
 :root {
   /* Cores principais */
@@ -562,12 +589,10 @@ section {
   background: var(--primary-color);
   color: var(--white);
   text-align: center;
-  padding: 2rem 0;
+  padding: 20px;
 }
 
-.footer p {
-  margin-bottom: 0.5rem;
-}
+
 
 /* ===== MODAIS ===== */
 .modal {
